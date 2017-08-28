@@ -1,0 +1,13 @@
+<md-card class="margin8">
+	<md-card-content>
+		<md-input-container>
+			<input [(ngModel)] = "owner" mdInput placeholder="Name">
+		</md-input-container>
+		<md-input-container>
+			<textarea mdInput placeholder="Message"></textarea>
+		</md-input-container>
+		<md-card-actions>
+			<button (click)="post()" md-button color="primary">POST</button>
+		</md-card-actions>
+	</md-card-content>	
+</md-card>
