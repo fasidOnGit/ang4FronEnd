@@ -9,13 +9,14 @@ import { FormsModule } from '@angular/forms';
 //Custom Components
 import { AppComponent } from './app.component';
 import { NewMessageComponent } from './new-message-component';
+import { NewMsgComponent} from './new-msg.component';
 
 //Customer Services
 import {WebService} from './web.service';
 
 @NgModule({
   declarations: [
-    AppComponent , NewMessageComponent
+    AppComponent , NewMessageComponent, NewMsgComponent
   ],
   imports: [
     BrowserModule , MaterialModule , BrowserAnimationsModule , HttpModule , FormsModule

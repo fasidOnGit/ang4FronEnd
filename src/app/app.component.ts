@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild } from '@angular/core';
 import { WebService } from './web.service';
 import { NewMessageComponent } from './new-message-component';
+import { NewMsgComponent} from './new-msg.component';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,19 @@ import { NewMessageComponent } from './new-message-component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  messages = []
 
-  constructor(private webService : WebService){}
+  @ViewChild(NewMsgComponent) msg : NewMsgComponent;
 
-  async ngOnInit(){
-    var response = await this.webService.getMessages();
-    this.messages = response.json();
+  onPosted(message) {
+    this.msg.messages.push(message);
   }
-  title = 'Angular';
+  // messages = []
+
+  // constructor(private webService : WebService){}
+
+  // async ngOnInit(){
+  //   var response = await this.webService.getMessages();
+  //   this.messages = response.json();
+  // }
   
 }
