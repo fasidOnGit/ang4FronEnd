@@ -1,14 +1,15 @@
 import { Component , ViewChild } from '@angular/core';
 import { WebService } from './web.service';
-// import { NewMessageComponent } from './new-message-component';
-// import { NewMsgComponent} from './new-msg.component';
+import { NewMessageComponent } from './new-message-component';
+import { NewMsgComponent} from './new-msg.component';
 import { NavComponent } from './nav.component';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'home',
+  template: `<new-message></new-message>
+             <new-msg></new-msg>`,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class HomeComponent {
 
   // @ViewChild(NewMsgComponent) msg : NewMsgComponent;
 

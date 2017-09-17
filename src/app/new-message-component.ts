@@ -1,4 +1,4 @@
-import { Component , Output , EventEmitter } from '@angular/core';
+import { Component} from '@angular/core';
 import { WebService } from './web.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { WebService } from './web.service';
 
 export class NewMessageComponent {
 
-	@Output() onPosted = new EventEmitter();
+	// @Output() onPosted = new EventEmitter();
 
 	constructor(private webService : WebService){}
 
@@ -19,6 +19,6 @@ export class NewMessageComponent {
 	}
 	post() {
 		this.webService.postMessage(this.message);
-		this.onPosted.emit(this.message);
+		// this.onPosted.emit(this.message);
 	}
 }
