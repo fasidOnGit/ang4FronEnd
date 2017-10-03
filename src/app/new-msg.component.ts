@@ -8,13 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 
 export class NewMsgComponent {
 	constructor(private webService : WebService ,private route : ActivatedRoute){}
-	messages;
+	// messages;
 	 ngOnInit(){
 		var name = this.route.snapshot.params.name;
 		 this.webService.getMessages(name);
-		 this.webService.messageSubject.subscribe(messages => {
+		 
+		 //one way of subscribing the observable
+		 /*this.webService.messages.subscribe(messages => {
 		 	this.messages = messages;
-		 	})
+		 	})*/
 	}
 		// messages = this.webService.messages;
 	  // messages = []
